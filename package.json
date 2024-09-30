@@ -1,0 +1,17 @@
+{
+  "name": "api-testing-project",
+  "version": "1.0.0",
+  "description": "API Testing with Cucumber and POM",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^7.0.0",
+    "axios": "^0.21.1",
+    "chai": "^4.3.4"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  }
+}

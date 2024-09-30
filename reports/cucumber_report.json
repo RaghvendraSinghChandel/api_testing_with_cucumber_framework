@@ -1,0 +1,287 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "grocery-api-testing;successfully-fetch-products",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Successfully fetch products",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 4,
+            "name": "I send a GET request to the products API",
+            "match": {
+              "location": "step-definitions/grocery.steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 611000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "I should receive a 200 status code",
+            "match": {
+              "location": "step-definitions/grocery.steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should have product id",
+            "match": {
+              "location": "step-definitions/grocery.steps.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "grocery-api-testing;retrieve-the-specific-product",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Retrieve the specific product",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I send a GET request to the specific product",
+            "match": {
+              "location": "step-definitions/grocery.steps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 675000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I should receive a 200 status code",
+            "match": {
+              "location": "step-definitions/grocery.steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should have product id and product label",
+            "match": {
+              "location": "step-definitions/grocery.steps.js:62"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "grocery-api-testing;create-a-cart-and-validate-card-id-property-exist",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Create a cart and validate card id property exist",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I send a POST request to create a new cart",
+            "match": {
+              "location": "step-definitions/grocery.steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1746000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "I should receive a 201 status code",
+            "match": {
+              "location": "step-definitions/grocery.steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "Cart response should contain created and cart id property",
+            "match": {
+              "location": "step-definitions/grocery.steps.js:77"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "grocery-api-testing;add-item-into-cart",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Add item into cart",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I send a POST request to add items in cart",
+            "match": {
+              "location": "step-definitions/grocery.steps.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1483000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "I should receive a 201 status code",
+            "match": {
+              "location": "step-definitions/grocery.steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I assert itemId and created property should be in response",
+            "match": {
+              "location": "step-definitions/grocery.steps.js:84"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "grocery-api-testing;modified-items-from-cart",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "Modified items from cart",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 24,
+            "name": "I send PATCH request to modified cart items",
+            "match": {
+              "location": "step-definitions/grocery.steps.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1271000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "I should receive a 204 status code",
+            "match": {
+              "location": "step-definitions/grocery.steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "grocery-api-testing;delete-items-from-cart",
+        "keyword": "Scenario",
+        "line": 27,
+        "name": "Delete items from cart",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 28,
+            "name": "I send DELETE request to delete cart",
+            "match": {
+              "location": "step-definitions/grocery.steps.js:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1337000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 29,
+            "name": "I should receive a 204 status code",
+            "match": {
+              "location": "step-definitions/grocery.steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "grocery-api-testing",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Grocery API Testing",
+    "tags": [],
+    "uri": "features/grocery.feature"
+  }
+]
